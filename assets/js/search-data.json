@@ -2,6 +2,17 @@
   
     
         "post0": {
+            "title": "_core",
+            "content": "",
+            "url": "https://maclawry.github.io/fastblog/2021/01/18/_core.html",
+            "relUrl": "/2021/01/18/_core.html",
+            "date": " • Jan 18, 2021"
+        }
+        
+    
+  
+    
+        ,"post1": {
             "title": "From Nbdev",
             "content": "Blog Content . Trying out blogging . say_hello(&#39;maclawry&#39;) . &#39;Hello maclawry!&#39; . assert say_hello(&#39;maclawry&#39;) == &#39;Hello maclawry!&#39; . insert image .",
             "url": "https://maclawry.github.io/fastblog/2021/01/15/from-nbdev.html",
