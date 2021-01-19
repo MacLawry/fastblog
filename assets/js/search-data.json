@@ -1,11 +1,22 @@
 {
   
+    
+        "post0": {
+            "title": "From Nbdev",
+            "content": "Blog Content . Trying out blogging . say_hello(&#39;maclawry&#39;) . &#39;Hello maclawry!&#39; . assert say_hello(&#39;maclawry&#39;) == &#39;Hello maclawry!&#39; . insert image .",
+            "url": "https://maclawry.github.io/fastblog/2021/01/15/from-nbdev.html",
+            "relUrl": "/2021/01/15/from-nbdev.html",
+            "date": " • Jan 15, 2021"
+        }
+        
+    
+  
 
   
   
 
   
-      "page1": {
+      ,"page1": {
           "title": "About Me",
           "content": "This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
           "url": "https://maclawry.github.io/fastblog/about/",
