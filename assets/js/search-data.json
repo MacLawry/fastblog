@@ -2,10 +2,142 @@
   
     
         "post0": {
-            "title": "My Simple DS Templates",
-            "content": ". Tip: Start with the easy games. Datasets already shipped with sklearn and fewer steps to creating models. Later, gradually introduce more granular templates. The plan is; revisit the same familiar templates, add more steps and weigh the tradeoffs. Hopefully, unneccesary complexity will ruin our model accuracy and we will revert to a simpler solution. This plan, if it works out, will help us choose paths to take and maybe get really good at it. . Speaking of paths. . Lets look at the problems we try to solve like playing an adventure game. I should be the last person to talk about games. I have only ever played 2 games in my life( 3 to be precise); snake senzia and project igi 1&amp;2 (best game ever). We can all agree that the best/fun way to play a game, is to learn basic controls, get started, die alot, keep dying untill you have exhausted all possible ways the game can kill you. In every game, there are some basic ways of getting shot, ie, you spend to much time on one scene, guards on patrol get you, or the sniper gets you. With time, you learn your way around try to finish a mission with a better score than last time i.e without getting hit or without tripping any alarms and you actually try out the harder but shorter ways to finish the mission or look for more challenging games. This is the way. . Others know this to be true, it has been said many times before, &#39;Just start&#39;. That feeling of &#39;I need to read this book and that book&#39;, &#39;I need to understand all the jargon from a research paper&#39; are the obvious comebacks. Ultimately, you do need to read alot of books and understand research papers. But thats level 5. Lets start at level 1, its still fun. This is the way. . Important: Turns out, watching someone else do the hardwork, is not a transferrable skill. Who would have thought? . Important: Narrative, one of the most important things is to have a narrative, that is why video games thrive. A narative thats transports you to a new place that you love being and you want to get back to every chance you get. . Lets start with the basics. . . Note: Datascience is broad. Its similar to saying &#8217;Medicine&#8217; or &#8217;Doctor&#8217;. For general conversations, that will pass but you might have to be more direct in some scenarios. I tend to argue that Machine Learning and Deeplearning is the true essense of Data Science. For this reason, I will concentate on the these two. . Supervised and Unsupervised Learning . Why machine learning? Machine learning helps solve some weird class of problems. Take for example, facial recognition, or language translation. This problems would be hard to solve with other methods of programming. If you do make to solve them, they would be need to be in very specific settings, eg, the face had to still or it could only recognize very few faces. Machine learning helps solve this. . We wont be covering such complex project here, not just yet. . Machine learning has 2 main categories, Supervised and Unsupervised learning. In supervised learning, we know what the ground truth is ie. we have recorded enough outcomes(labels or &#39;y&#39; variable ) given certain events(features or &#39;x&#39; variable). Labels are the dependent variables (y) that are a mix of different other independent variables(x). We will use labels and features for consistency. A model is simpy a way to model features to give the desired output y. Simply, f(x)= y. . In unsupervised learning, we dont have labels, we create our own labels or categories from features. . A simple supervised model. . Supervised learning is either a classification problem or regression problem. Classification models predict the label class i.e boy, girl, plant species etc. Regression models predict labels as continous variables. i.e house price, fuel consumption etc. . Step 0 Problem statement and libraries needed . We are given an array of petal and sepal lenght measurements for 3 iris species. Our role is predict the species correclty if given new taxonomic measurements of petals and sepals of the same species of flowers. . # the data is already in sklearn. from sklearn import datasets import pandas as pd import numpy as np import matplotlib.pyplot as plt import seaborn as sns plt.style.use(&#39;ggplot&#39;) . Step 1: Loading and preliminary data inspection . iris = datasets.load_iris() print(f&#39; type iris: {type(iris)}&#39;) print(f&#39;iris keys: {iris.keys()}&#39;) print(f&#39;type iris.data: {type(iris.data)}&#39;) print(f&#39;type iris.target: {type(iris.target)}&#39;) . type iris: &lt;class &#39;sklearn.utils.Bunch&#39;&gt; iris keys: dict_keys([&#39;data&#39;, &#39;target&#39;, &#39;target_names&#39;, &#39;DESCR&#39;, &#39;feature_names&#39;, &#39;filename&#39;]) type iris.data: &lt;class &#39;numpy.ndarray&#39;&gt; type iris.target: &lt;class &#39;numpy.ndarray&#39;&gt; . . Note: this is a dictionary of numpy.array values. We will have to create out pandas dataframe using these keys. . df= pd.DataFrame(iris.data, columns= iris.feature_names) df.info() df.describe() . &lt;class &#39;pandas.core.frame.DataFrame&#39;&gt; RangeIndex: 150 entries, 0 to 149 Data columns (total 4 columns): # Column Non-Null Count Dtype -- -- 0 sepal length (cm) 150 non-null float64 1 sepal width (cm) 150 non-null float64 2 petal length (cm) 150 non-null float64 3 petal width (cm) 150 non-null float64 dtypes: float64(4) memory usage: 4.8 KB . sepal length (cm) sepal width (cm) petal length (cm) petal width (cm) . count 150.000000 | 150.000000 | 150.000000 | 150.000000 | . mean 5.843333 | 3.057333 | 3.758000 | 1.199333 | . std 0.828066 | 0.435866 | 1.765298 | 0.762238 | . min 4.300000 | 2.000000 | 1.000000 | 0.100000 | . 25% 5.100000 | 2.800000 | 1.600000 | 0.300000 | . 50% 5.800000 | 3.000000 | 4.350000 | 1.300000 | . 75% 6.400000 | 3.300000 | 5.100000 | 1.800000 | . max 7.900000 | 4.400000 | 6.900000 | 2.500000 | . df.head() . sepal length (cm) sepal width (cm) petal length (cm) petal width (cm) . 0 5.1 | 3.5 | 1.4 | 0.2 | . 1 4.9 | 3.0 | 1.4 | 0.2 | . 2 4.7 | 3.2 | 1.3 | 0.2 | . 3 4.6 | 3.1 | 1.5 | 0.2 | . 4 5.0 | 3.6 | 1.4 | 0.2 | . Step 2 Visualize the data . We always want to visualize data. Th reason is 2 fold. It will help you draw up conclusions fast and it will most like be the method in which you communiate your findings. . sns.heatmap(df.corr()) . &lt;matplotlib.axes._subplots.AxesSubplot at 0x7f42f8a4a7d0&gt; . sns.pairplot(df) . &lt;seaborn.axisgrid.PairGrid at 0x7f42f8aa43d0&gt; . TODO: Add notes We aready know that our label had class of 3 flower . Step 3 Choose the best model to fit the data with . from sklearn.neighbors import KNeighborsClassifier knn = KNeighborsClassifier(n_neighbors = 6) x , y = iris.data, iris.target knn.fit(x, y) . KNeighborsClassifier(algorithm=&#39;auto&#39;, leaf_size=30, metric=&#39;minkowski&#39;, metric_params=None, n_jobs=None, n_neighbors=6, p=2, weights=&#39;uniform&#39;) . . Note: note we did not fit the dataframe. We fit data to a nympy.array. . x.shape, y.shape, type(x), type(y) . ((150, 4), (150,), numpy.ndarray, numpy.ndarray) . Step5 Making predictions on test data . new_data = np.array([[5.6, 2.8, 3.9, 1.1], [4.0, 2.1, 1.0, 0.2], [4.3, 3.6, 1.0, 0.3], [5.7, 2.6, 3.8, 1.3]]) prediction = knn.predict(new_data) print( prediction) . [1 0 0 1] . Step 6 Perfomance Metrics . No model would be compelete if did not try to measure how well it has perfomed. Our model was a classification model, so we shoud atleast see how well the model does at predicting on more iris data. Say, a scientist handed you new data, correclty formated to suit your training data (how thoughtful), how well could you convince him that your model is just as accurate if not better that the intern at labelling the dataset? . Model accuracy, is the most important part of machine learning. It means that your model is verifiable, generalizable and reproducable. . Our model, has no more data to test on, we used all our data to train. This is obviously a problem. We now cant pose the same questions to our intelligent model, that we used to train it on. A 100% accuracy wouldnt be imperessive in this scenario. . So what should we have different? For starters, dont use all your data. . Splitting our data into test and train set. . from sklearn.model_selection import train_test_split from sklearn.metrics import accuracy_score xtrain, xtest, ytrain, ytest = train_test_split(x, y , test_size = 0.2, random_state = 1, stratify = y) knn= KNeighborsClassifier(n_neighbors=8) knn.fit(xtrain, ytrain) ypred = knn.predict(xtest) print(ypred) . [2 0 1 0 0 0 2 2 2 1 0 1 2 1 2 0 2 1 1 2 1 1 0 0 2 1 0 0 1 1] . print(f&#39;score: {knn.score(xtest, ytest)}&#39;) print(f&#39;accuracy: {accuracy_score(ypred, ytest)}&#39;) . score: 0.9666666666666667 accuracy: 0.9666666666666667 . . Note: knn.score calls accuracy_score under the hood, that is why they give the same result. . We are 97% model accuracy in telling apart iris flowers, the intern is in trouble. . Wouldnt it be nice if we say the predicions as flower species names? Lets decode the predictions . from sklearn.preprocessing import LabelEncoder le = LabelEncoder().fit(iris.target_names) le.inverse_transform(ypred) . array([&#39;virginica&#39;, &#39;setosa&#39;, &#39;versicolor&#39;, &#39;setosa&#39;, &#39;setosa&#39;, &#39;setosa&#39;, &#39;virginica&#39;, &#39;virginica&#39;, &#39;virginica&#39;, &#39;versicolor&#39;, &#39;setosa&#39;, &#39;versicolor&#39;, &#39;virginica&#39;, &#39;versicolor&#39;, &#39;virginica&#39;, &#39;setosa&#39;, &#39;virginica&#39;, &#39;versicolor&#39;, &#39;versicolor&#39;, &#39;virginica&#39;, &#39;versicolor&#39;, &#39;versicolor&#39;, &#39;setosa&#39;, &#39;setosa&#39;, &#39;virginica&#39;, &#39;versicolor&#39;, &#39;setosa&#39;, &#39;setosa&#39;, &#39;versicolor&#39;, &#39;versicolor&#39;], dtype=&#39;&lt;U10&#39;) . There is alot we didnt cover, eg KNN model intuition, what were other alternative models, would our model generalize well, is it reproducable etc. That comes later. . We now have a canvas to start with. This is very weak canvas, and barely scratches the surface of each step, we over simplified our responsibilites, on purpose. Later, we will revisit each step, grow the number of steps and try more demanding challenges. . Biliography: https://www.kaggle.com/skalskip/iris-data-visualization-and-knn-classification .",
-            "url": "https://maclawry.github.io/fastblog/2021/01/19/Level_1_enjoying-the-landscape.html",
-            "relUrl": "/2021/01/19/Level_1_enjoying-the-landscape.html",
+            "title": "Title",
+            "content": "",
+            "url": "https://maclawry.github.io/fastblog/2021/01/27/Time-Series.html",
+            "relUrl": "/2021/01/27/Time-Series.html",
+            "date": " • Jan 27, 2021"
+        }
+        
+    
+  
+    
+        ,"post1": {
+            "title": "Title",
+            "content": "NLP .",
+            "url": "https://maclawry.github.io/fastblog/2021/01/27/NLP.html",
+            "relUrl": "/2021/01/27/NLP.html",
+            "date": " • Jan 27, 2021"
+        }
+        
+    
+  
+    
+        ,"post2": {
+            "title": "Title",
+            "content": "Whats your take on things. What story do you tell yourself to transport yourself to a place of focus... . How does the horizon look to you. . the build up... . hunting for a good community .",
+            "url": "https://maclawry.github.io/fastblog/2021/01/27/Motivation-Building-up-my-spirit.html",
+            "relUrl": "/2021/01/27/Motivation-Building-up-my-spirit.html",
+            "date": " • Jan 27, 2021"
+        }
+        
+    
+  
+    
+        ,"post3": {
+            "title": "Title",
+            "content": "",
+            "url": "https://maclawry.github.io/fastblog/2021/01/27/Image-data.html",
+            "relUrl": "/2021/01/27/Image-data.html",
+            "date": " • Jan 27, 2021"
+        }
+        
+    
+  
+    
+        ,"post4": {
+            "title": "Title",
+            "content": "Visualizing data . Such a simple title for such a noble task feature selection feature engineering feature crosses feature intuition before fitting features intuition methods after fitting- eg pdp, permutation importance, coefficients in linear and logistic reg, random forest feature scorring. limiting scope of tricks and visualizations working with 1000 features . create features from other ml algos banarize continous variable .",
+            "url": "https://maclawry.github.io/fastblog/2021/01/27/.-Visualizing-our-data.html",
+            "relUrl": "/2021/01/27/.-Visualizing-our-data.html",
+            "date": " • Jan 27, 2021"
+        }
+        
+    
+  
+    
+        ,"post5": {
+            "title": "Title",
+            "content": "Whats in a product.. how to get users, are they gonna pay, how to keep them, .",
+            "url": "https://maclawry.github.io/fastblog/2021/01/27/.-Product-Creating-a-user-base,-monetization,-scaling-and-retention/html",
+            "relUrl": "/2021/01/27/.-Product-Creating-a-user-base,-monetization,-scaling-and-retention/html",
+            "date": " • Jan 27, 2021"
+        }
+        
+    
+  
+    
+        ,"post6": {
+            "title": "Title",
+            "content": "This will determine, . order the : techniques needed, . order theproblems within the problem. . Work back wards, in time or process . Components running under the hood and interactions . read widely- ask around. look for the easiest solution to fit/predict as opposed to accuracy. . a dumb, funny solution is better that nothing. never be embarassed. .",
+            "url": "https://maclawry.github.io/fastblog/2021/01/27/.-Problem-Statement(s).html",
+            "relUrl": "/2021/01/27/.-Problem-Statement(s).html",
+            "date": " • Jan 27, 2021"
+        }
+        
+    
+  
+    
+        ,"post7": {
+            "title": "Title",
+            "content": "How good is it... what are some metrics to measure success... Accuracy, loss... .",
+            "url": "https://maclawry.github.io/fastblog/2021/01/27/.-Predicts-and-accuracy-and-feasibility.html",
+            "relUrl": "/2021/01/27/.-Predicts-and-accuracy-and-feasibility.html",
+            "date": " • Jan 27, 2021"
+        }
+        
+    
+  
+    
+        ,"post8": {
+            "title": "Title",
+            "content": "What is the best model to fit the data to? . you probably arrived with a good idea from problem statement analysis but here, we look at computation speed, simplicity etc. and other detailed considerations fit the data.... . test on test data , repeat on new models, model ensembles boosting. . always keeping a base model running. .",
+            "url": "https://maclawry.github.io/fastblog/2021/01/27/.-Model-Intuition.html",
+            "relUrl": "/2021/01/27/.-Model-Intuition.html",
+            "date": " • Jan 27, 2021"
+        }
+        
+    
+  
+    
+        ,"post9": {
+            "title": "Title",
+            "content": "Making predictions on test data... . unseen data from the real world. . remember the data cleaning mappings and features eng steps... you will need them to transform your raw data all over again. . its is important you do do it this way... to make sure your model is deploy ready. . dont confuse test and validation test...validation runs from ... xyz... a test is a test is a test is a test... it runs from a to z not ...xyz only. .",
+            "url": "https://maclawry.github.io/fastblog/2021/01/27/.-Making-Prediction-on-test-data.html",
+            "relUrl": "/2021/01/27/.-Making-Prediction-on-test-data.html",
+            "date": " • Jan 27, 2021"
+        }
+        
+    
+  
+    
+        ,"post10": {
+            "title": "Title",
+            "content": "data is dirty, try look for a way to find patterns in the dirty data. this will help you create maps in to specific format. . remember, it is incremental maps. . remember rules of tidy data. . all you are looking for is a features + label array. and mappers to easily create that. .",
+            "url": "https://maclawry.github.io/fastblog/2021/01/27/.-Loading-Data,-Cleaning-and-Mappings.html",
+            "relUrl": "/2021/01/27/.-Loading-Data,-Cleaning-and-Mappings.html",
+            "date": " • Jan 27, 2021"
+        }
+        
+    
+  
+    
+        ,"post11": {
+            "title": "Title",
+            "content": "api serving... memoization, datascructures and algorithms, using golang for speed of the web app. .",
+            "url": "https://maclawry.github.io/fastblog/2021/01/27/.-Deploy-as-an-app-using-spark.html",
+            "relUrl": "/2021/01/27/.-Deploy-as-an-app-using-spark.html",
+            "date": " • Jan 27, 2021"
+        }
+        
+    
+  
+    
+        ,"post12": {
+            "title": "Developing Analytic Intuition",
+            "content": "Creative a narrative . Having a narrative is important. Narratives draw you in, taking you on journey whose end you dont know yet. Time flies, as you are transported into &#39;focus&#39; and everything else is a nuance you wish off. You know have a strong narrative when it shows in your thinking and actions. How then, do you make a good narative that effortlessly transports you, at will, to some other place. . Keep a canvas, so you pick up from where you left, so you appreciate your growth and so you keep a log of your recipes, good and bad, just like every great savant has unfinished projects. Get paid for your work. Nothing will make you work harder than getting paid to complete an assigment. Alternatively, measure your works productivity with an audience. Always make sure you are your biggest audience, take on a different form and look at your work... over over. . Note to self:Start with the easy games, the view of the landscape and simple plot lines. Datasets shipped with sklearn with fewer steps to modeling and intentionally nuanced for illustration of concepts. Later, gradually introduce more granular templates.Create familiarity, add more steps and weigh the tradeoffs. . Speaking of narratives. . Lets look at the problems we try to solve like an adventure game. We learn basic controls, get started, fail alot, keep failing untill we have considerable intuition of the gameplay. We detail and catalog steps to elegance. In no time we will have an arsenal to deploy at more challenging games. This is the way. . &#39;Just start&#39;, better an unfinished project than none at all. The feeling that, &quot;you need to read plenty of books or understand all the jargon from a research paper&quot;, are obvious setbacks. Ultimately, you do need to read alot of books and understand research papers. But thats at a later level. Start at level 1, its still fun. This is the way. . . Important: As turns out, watching others do the hardwork, is not a transferrable skill. Who knew? . Lets start with the basics. . Supervised and Unsupervised Learning . Why machine learning? Machine learning helps solve a unique class of problems. Take for example, facial recognition, or language translation. These problems come ever close to how humans perceive the world. Such that machines are now an embeded part of human interaction, without which, we feel less of ourselves...This is only the beginning in 5 - 10 years, I woudn&#39;t want to be mere observer but a savant in the field. . Machine learning has 3 main flavours, Supervised, Unsupervised and Reinforcement Learning. The main data structures are tabular data, image data, language and timeseries. In supervised learning, we know what the ground truth is. We have recorded enough outcomes given certain events and interactions. The outcomes are the labels or dependent variables (y), that are the end product of feature interactions of independent variables(x). A model is a recipe of features that can map feature interaction to a label with certain degree of acceptance. The degree of acceptance is accuracy in a reproducable and generalised way. Simply put, a model is a function that maps x(s) to y. . In unsupervised learning, we dont have labels, we learn labels or categories from features. . A simple supervised model. . Supervised learning is either a classification problem or regression problem. Classification models predict the label class i.e boy, girl, plant species etc. Regression models predict labels as continous variables. i.e house price, fuel consumption etc. . Step 0 Problem statement and libraries needed . We are given an array of petal and sepal measurements for 3 iris species. Our role is predict the species correclty if given new taxonomic measurements of petals and sepals of the same species of flowers. This is clearly a classification problem. . # the data is already in sklearn. from sklearn import datasets import pandas as pd import numpy as np import matplotlib.pyplot as plt import seaborn as sns plt.style.use(&#39;ggplot&#39;) . Step 1: Loading and preliminary data inspection . iris = datasets.load_iris() print(f&#39; type iris: {type(iris)}&#39;) print(f&#39;iris keys: {iris.keys()}&#39;) print(f&#39;type iris.data: {type(iris.data)}&#39;) print(f&#39;type iris.target: {type(iris.target)}&#39;) . type iris: &lt;class &#39;sklearn.utils.Bunch&#39;&gt; iris keys: dict_keys([&#39;data&#39;, &#39;target&#39;, &#39;target_names&#39;, &#39;DESCR&#39;, &#39;feature_names&#39;, &#39;filename&#39;]) type iris.data: &lt;class &#39;numpy.ndarray&#39;&gt; type iris.target: &lt;class &#39;numpy.ndarray&#39;&gt; . . Note: this is a dictionary of numpy.array values. We will have to create out pandas dataframe using the keys. . df= pd.DataFrame(iris.data, columns= iris.feature_names) df.info() df.describe() . -- NameError Traceback (most recent call last) &lt;ipython-input-4-e4e9619a6a33&gt; in &lt;module&gt; 1 #create a dataframe of features 2 -&gt; 3 df= pd.DataFrame(iris.data, columns= iris.feature_names) 4 5 df.info() NameError: name &#39;iris&#39; is not defined . df.head() . sepal length (cm) sepal width (cm) petal length (cm) petal width (cm) . 0 5.1 | 3.5 | 1.4 | 0.2 | . 1 4.9 | 3.0 | 1.4 | 0.2 | . 2 4.7 | 3.2 | 1.3 | 0.2 | . 3 4.6 | 3.1 | 1.5 | 0.2 | . 4 5.0 | 3.6 | 1.4 | 0.2 | . Step 2 Visualize the data . We always want to visualize data. The reason is 2 fold. It will help you draw up conclusions fast and it will most likely be the method in which you communicate your findings. . sns.heatmap(df.corr()) . &lt;matplotlib.axes._subplots.AxesSubplot at 0x7f42f8a4a7d0&gt; . sns.pairplot(df) . &lt;seaborn.axisgrid.PairGrid at 0x7f42f8aa43d0&gt; . TODO: Add notes We aready know that our label had class of 3 flower . Step 3 Choose the best model to fit the data with . from sklearn.neighbors import KNeighborsClassifier knn = KNeighborsClassifier(n_neighbors = 6) x , y = iris.data, iris.target knn.fit(x, y) . KNeighborsClassifier(algorithm=&#39;auto&#39;, leaf_size=30, metric=&#39;minkowski&#39;, metric_params=None, n_jobs=None, n_neighbors=6, p=2, weights=&#39;uniform&#39;) . . Note: note we did not fit on a dataframe. We fit our model on nympy.array. . x.shape, y.shape, type(x), type(y) . ((150, 4), (150,), numpy.ndarray, numpy.ndarray) . Step 4 Making predictions on test data . new_data = np.array([[5.6, 2.8, 3.9, 1.1], [4.0, 2.1, 1.0, 0.2], [4.3, 3.6, 1.0, 0.3], [5.7, 2.6, 3.8, 1.3]]) prediction = knn.predict(new_data) print( prediction) . [1 0 0 1] . Step 5 Perfomance Metrics . What model would be compelete if did not try to measure how well it perfomed. Say, a scientist handed us new data, kneatly formated to suit our training data (how thoughtful), how convincing is pur classification model to accurately label the dataset? . Model accuracy. It means that your model is verifiable, generalizable and reproducable. . Our model, has no more data to test on, we used all our data to train. This is obviously a problem. We cant pose the same questions to our intelligent model, that we used to train it on. A 100% accuracy wouldnt be imperessive in this scenario. . So what should we have different? . Splitting our data into train, test and validation set. . For now, we stick to train and test. . from sklearn.model_selection import train_test_split from sklearn.metrics import accuracy_score xtrain, xtest, ytrain, ytest = train_test_split(x, y , test_size = 0.2, random_state = 1, stratify = y) knn= KNeighborsClassifier(n_neighbors=8) knn.fit(xtrain, ytrain) ypred = knn.predict(xtest) print(ypred) . [2 0 1 0 0 0 2 2 2 1 0 1 2 1 2 0 2 1 1 2 1 1 0 0 2 1 0 0 1 1] . print(f&#39;score: {knn.score(xtest, ytest)}&#39;) print(f&#39;accuracy: {accuracy_score(ypred, ytest)}&#39;) . score: 0.9666666666666667 accuracy: 0.9666666666666667 . . Note: knn.score calls accuracy_score under the hood, that is why they give the same result. . We are at 97% model accuracy in telling apart iris flower species. . It be nice if we say the predicions as flower species names as opposed to numbers? Lets decode the predictions . from sklearn.preprocessing import LabelEncoder le = LabelEncoder().fit(iris.target_names) le.inverse_transform(ypred) . array([&#39;virginica&#39;, &#39;setosa&#39;, &#39;versicolor&#39;, &#39;setosa&#39;, &#39;setosa&#39;, &#39;setosa&#39;, &#39;virginica&#39;, &#39;virginica&#39;, &#39;virginica&#39;, &#39;versicolor&#39;, &#39;setosa&#39;, &#39;versicolor&#39;, &#39;virginica&#39;, &#39;versicolor&#39;, &#39;virginica&#39;, &#39;setosa&#39;, &#39;virginica&#39;, &#39;versicolor&#39;, &#39;versicolor&#39;, &#39;virginica&#39;, &#39;versicolor&#39;, &#39;versicolor&#39;, &#39;setosa&#39;, &#39;setosa&#39;, &#39;virginica&#39;, &#39;versicolor&#39;, &#39;setosa&#39;, &#39;setosa&#39;, &#39;versicolor&#39;, &#39;versicolor&#39;], dtype=&#39;&lt;U10&#39;) . There is alot we didnt cover, eg our chosen KNN model intuition, what were other alternative models, would our model generalize well, is it reproducable etc. That comes later. . We now have a canvas to start with, not one we are proud of, but a canvas no matter. This is very weak canvas that barely paints the horizon, we have over simplified our responsibilites, on purpose. Later, we will revisit each step, go off on tangents, grow the number of steps and try more demanding challenges. . Biliography: https://www.kaggle.com/skalskip/iris-data-visualization-and-knn-classification .",
+            "url": "https://maclawry.github.io/fastblog/2021/01/19/Testing-the-landscape.html",
+            "relUrl": "/2021/01/19/Testing-the-landscape.html",
             "date": " • Jan 19, 2021"
         }
         
