@@ -135,6 +135,18 @@ window.onload = wrap_img;
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Thinking-out-loud">Thinking out loud<a class="anchor-link" href="#Thinking-out-loud"> </a></h1><p>Lets see what I can come up with, without any reference, to explain how I understand complexity.</p>
+<p>Past what threshold of simple ideas, crossed together, can we say a complex whole has been achieved? A-&gt; B --&gt; C |---&gt; A. Is this most efficient forward transfer of information.</p>
+<p>A complex whole has perpetuity in producing the same simple sums that define it, at less efficiency, until its eventual decay unless an 'observer' agent is in control to delay the inevitable...Chaotic when unforeseen, beatiful when tamed and hard to understand when foreign.</p>
+<p>Is there a way to disentangle it, is there order in molding it. 
+I guess we will learn more when we cover reinforcement learning.</p>
+<p>Now refer to other explanations...</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Creating-a-narrative">Creating a narrative<a class="anchor-link" href="#Creating-a-narrative"> </a></h1><p>Having a narrative is important. Narratives draw you in, taking you on journey whose end you dont know yet. Time flies, as you are transported into 'focus' and everything else is a nuisance you wish off. You know have a strong narrative when it shows in your thinking and actions. How then, do you make a good narative that effortlessly transports you, at will, to some other place?</p>
 <p>Keep a canvas, so you pick up from where you left, so you appreciate your growth and so you keep a log of your recipes, good and bad, just like every great savant has unfinished projects. Get paid for your work. Nothing will make you work harder than getting paid to complete an assigment. Alternatively, measure your works productivity with an audience. Always make sure you are your biggest audience, take on a different form and look at your work... over and over.</p>
 
@@ -161,70 +173,8 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><div class="flash flash-warn">
     <svg class="octicon octicon-zap" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.561 1.5a.016.016 0 00-.01.004L3.286 8.571A.25.25 0 003.462 9H6.75a.75.75 0 01.694 1.034l-1.713 4.188 6.982-6.793A.25.25 0 0012.538 7H9.25a.75.75 0 01-.683-1.06l2.008-4.418.003-.006a.02.02 0 00-.004-.009.02.02 0 00-.006-.006L10.56 1.5zM9.504.43a1.516 1.516 0 012.437 1.713L10.415 5.5h2.123c1.57 0 2.346 1.909 1.22 3.004l-7.34 7.142a1.25 1.25 0 01-.871.354h-.302a1.25 1.25 0 01-1.157-1.723L5.633 10.5H3.462c-1.57 0-2.346-1.909-1.22-3.004L9.503.429z"></path></svg>
-    <strong>Important: </strong>As turns out, watching others do the hardwork, is not a transferrable skill. Who knew?
+    <strong>Important: </strong>As it turns out, watching others do the hardwork, is not a transferrable skill. Who knew?
 </div></p>
-
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
-
-<span class="n">le</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">)</span>
-<span class="n">le</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">(</span><span class="n">ypred</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([&#39;virginica&#39;, &#39;setosa&#39;, &#39;versicolor&#39;, &#39;setosa&#39;, &#39;setosa&#39;, &#39;setosa&#39;,
-       &#39;virginica&#39;, &#39;virginica&#39;, &#39;virginica&#39;, &#39;versicolor&#39;, &#39;setosa&#39;,
-       &#39;versicolor&#39;, &#39;virginica&#39;, &#39;versicolor&#39;, &#39;virginica&#39;, &#39;setosa&#39;,
-       &#39;virginica&#39;, &#39;versicolor&#39;, &#39;versicolor&#39;, &#39;virginica&#39;, &#39;versicolor&#39;,
-       &#39;versicolor&#39;, &#39;setosa&#39;, &#39;setosa&#39;, &#39;virginica&#39;, &#39;versicolor&#39;,
-       &#39;setosa&#39;, &#39;setosa&#39;, &#39;versicolor&#39;, &#39;versicolor&#39;], dtype=&#39;&lt;U10&#39;)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>There is alot we didnt cover, eg our chosen KNN model intuition, what were other alternative models, would our model generalize well, is it reproducable etc. That comes later.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We now have a canvas to start with, not one we are proud of, but a canvas no matter. This is very weak canvas that barely paints the horizon, we  have over simplified our responsibilites, on purpose. Later, we will revisit each step, go off on tangents, grow the number of steps and try more demanding challenges.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Biliography: <a href="https://www.kaggle.com/skalskip/iris-data-visualization-and-knn-classification">https://www.kaggle.com/skalskip/iris-data-visualization-and-knn-classification</a></p>
 
 </div>
 </div>
