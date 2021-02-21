@@ -49,6 +49,17 @@
   
 
   
+      ,"page2": {
+          "title": "consult",
+          "content": "Here are technoligies that I`m currenly fluent with, and can help you integrate. . Jekyll static sites: . Chui Local: . Databox: . webflow: .",
+          "url": "https://maclawry.github.io/fastblog/consult/",
+          "relUrl": "/consult/",
+          "date": ""
+      }
+      
+  
+
+  
 
   
   
@@ -70,7 +81,7 @@
   
 
   
-      ,"page10": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://maclawry.github.io/fastblog/robots.txt",
