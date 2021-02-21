@@ -40,7 +40,7 @@
   
       ,"page1": {
           "title": "About Me",
-          "content": "Welcome, I still dont know much about myself. I will keep you updated. . This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
+          "content": "Welcome, I still dont know much about myself. I will keep you updated. . TODO: add contact form .",
           "url": "https://maclawry.github.io/fastblog/about/",
           "relUrl": "/about/",
           "date": ""
