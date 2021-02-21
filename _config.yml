@@ -6,7 +6,7 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: Data Science notes and projects
+title: Data upskilling notes and narratives
 description: Concepts I dont want to forget and projects I think are fun. ❤
 github_username: MacLawry
 # you can comment the below line out if your repo name is not different than your baseurl
@@ -120,3 +120,4 @@ kramdown:
 feed:
   posts_limit: 5 #default posts_limit: 10
   excerpt_only: true
+
