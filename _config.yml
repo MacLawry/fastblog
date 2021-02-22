@@ -41,6 +41,7 @@ minima:
   social_links:
     twitter: Maclawree
     github: Maclawry
+    instagram: Maclawree 
 
 # Set this to true to get LaTeX math equation support
 use_math: true
@@ -52,7 +53,7 @@ show_description: true
 show_image: true
 
 # Set this to true to turn on annotations with hypothes.is (https://web.hypothes.is/)
-annotations: true
+annotations: false
 
 # Set this to true to display tags on each post
 show_tags: true
