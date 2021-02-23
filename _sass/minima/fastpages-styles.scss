@@ -22,9 +22,11 @@ img.emoji{
 }
 
 .page-content {
+      <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet"> 
         -webkit-font-smoothing: antialiased !important;
         text-rendering: optimizeLegibility !important;
-        font-family: "Segoe UI", SegoeUI, Roboto, "Segoe WP", "Helvetica Neue", "Helvetica", "Tahoma", "Arial", sans-serif !important;
+        font-family: Roboto !important;
+        // font-family: "Segoe UI", SegoeUI, Roboto, "Segoe WP", "Helvetica Neue", "Helvetica", "Tahoma", "Arial", sans-serif !important;
 }
 
 // make non-headings slightly lighter
