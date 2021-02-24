@@ -6,8 +6,8 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: The Data Science Skills Competency Model (adapted)
-description: A blueprint for the growing data scientist profession. ❤
+title: Developing Analytic Skills
+description: Growing into the data science profession by seeking simple, robust scalable solutions to problems. ❤
 github_username: MacLawry
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "fastblog"
@@ -99,9 +99,9 @@ plugins:
 # See https://jekyllrb.com/docs/pagination/
 # For pagination to work, you cannot have index.md at the root of your repo, instead you must rename this file to index.html
 paginate: 7
-paginate_path: /page:num/
+paginate_path: /page:num/ 
 
-remote_theme: jekyll/minima
+remote_theme: jekyll/minima 
 
 titles_from_headings:
   enabled:     true
