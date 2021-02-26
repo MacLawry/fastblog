@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>What is Data Science | Developing Analytic Talent</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="What is Data Science" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="What is the role of Data Science and who are Data Scientists" />
+<meta property="og:description" content="What is the role of Data Science and who are Data Scientists" />
+<link rel="canonical" href="https://maclawry.github.io/fastblog/datascience" />
+<meta property="og:url" content="https://maclawry.github.io/fastblog/datascience" />
+<meta property="og:site_name" content="Developing Analytic Talent" />
+<meta property="og:image" content="https://maclawry.github.io/fastblog/images/8.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-25T00:00:00-06:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://maclawry.github.io/fastblog/images/8.png" />
+<meta property="twitter:title" content="What is Data Science" />
+<script type="application/ld+json">
+{"url":"https://maclawry.github.io/fastblog/datascience","@type":"BlogPosting","image":"https://maclawry.github.io/fastblog/images/8.png","headline":"What is Data Science","dateModified":"2021-02-25T00:00:00-06:00","datePublished":"2021-02-25T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://maclawry.github.io/fastblog/datascience"},"description":"What is the role of Data Science and who are Data Scientists","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/fastblog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://maclawry.github.io/fastblog/feed.xml" title="Developing Analytic Talent" /><link rel="shortcut icon" type="image/x-icon" href="/fastblog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head> 
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/fastblog/">Developing Analytic Talent</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/fastblog/about/">About</a><a class="page-link" href="/fastblog/consult/">Consult</a><a class="page-link" href="/fastblog/search/">Search</a><a class="page-link" href="/fastblog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline"> What is Data Science</h1><p class="page-description"> What is the role of Data Science and who are Data Scientists</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-02-25T00:00:00-06:00" itemprop="datePublished">
+        Feb 25, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/fastblog/categories/#machine learning">machine learning</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/fastblog/categories/#jupyter notebooks">jupyter notebooks</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/fastblog/categories/#data science">data science</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/fastblog/categories/#project workflow">project workflow</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/MacLawry/fastblog/tree/master/_notebooks/8.0 What is data science and what do data scientists do.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/fastblog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/MacLawry/fastblog/master?filepath=_notebooks%2F8.0+What+is+data+science+and+what+do+data+scientists+do.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/fastblog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/MacLawry/fastblog/blob/master/_notebooks/8.0 What is data science and what do data scientists do.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/fastblog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#What-is-Data-Science">What is Data Science </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Data-science-project-workflow">Data science project workflow </a></li>
+<li class="toc-entry toc-h2"><a href="#Data">Data </a></li>
+<li class="toc-entry toc-h2"><a href="#Analytics-tools-and-methodologies">Analytics tools and methodologies </a></li>
+<li class="toc-entry toc-h2"><a href="#Data-scientist">Data scientist </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/8.0 What is data science and what do data scientists do.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="What-is-Data-Science">
+<a class="anchor" href="#What-is-Data-Science" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is Data Science<a class="anchor-link" href="#What-is-Data-Science"> </a>
+</h1>
+<p><img src="/fastblog/images/copied_from_nb/../images/d_science.jpg" alt=""></p>
+<p>Data science is project based solving of strategically important problems.
+These problems are reduced to quantifiable sums to avoid generalities in hypothesis statement formulation.</p>
+<p>A hospital might ask, how can we reduce the number of re-admitions, a sales manager mights ask, how can I make more sales from my current team and leads. From here a data scientist will ask leading questions adn come up with a hypothesis after understanding your business domain. eg. He might hypothesise, adding 3 more nurses per doctor reduces readmissions by 20%.</p>
+<p>The data science strategy uses a data driven approach on a vast number of business problems and opportunities. It is the data scientists role to come up with data driven strategies with for the biggest opportunities within the organization.</p>
+<p>Data Science therefore is the role that makes data available and the data skills to address strategic business issues. These strategies vary; from a simple google form questionnaire asking for feedback to specialised consultation services.</p>
+<p>Data science solutions have inputs, and outcomes. The data scientists value is augmenting this relationship for desirable outcomes.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-science-project-workflow">
+<a class="anchor" href="#Data-science-project-workflow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data science project workflow<a class="anchor-link" href="#Data-science-project-workflow"> </a>
+</h2>
+<p>The list below outlines and agreeable data science workflow adaopted from the IBM Data Science Professional Competency Model.</p>
+<ol>
+<li>Business opportunity and hypothesis formulation </li>
+</ol>
+<p>The first part is understanding the problem domain, questioning assumptions and mostly reading widely and scantily for possible solutions. You would then formulate hypothesis that best seek to enlighten opinions. You would also check the quality and quantity of data and how it is served. Record any inconsistencies in data, and assupmtions that may be important further down the line.</p>
+<ul>
+<li>Business opportunity</li>
+<li>Find data sources. Availability and Suitabiity</li>
+<li>Explore and visualize data. Predictions and Insights</li>
+<li>Ascertain consistency or account for inconsistencies</li>
+</ul>
+<ol>
+<li>Proposing a model solution. Its delivery and serving  </li>
+</ol>
+<p>With credible data analysis reports, you can have a idea of possible models that should have decent results. Once you have some base models, you can tweek them with more data or engineer features.</p>
+<ul>
+<li>Clean data</li>
+<li>Feature engineer data</li>
+<li>Additional data</li>
+<li>Train models </li>
+<li>Model ensemble</li>
+<li>Deploy best model</li>
+<li>Model explainability </li>
+</ul>
+<ol>
+<li>Auditing model and solution implementation </li>
+</ol>
+<p>To ascertain your model works well on production data, you must constantly audit data sources, inputs, pipelines and data warehouses and keep tabs on any changes that affect your model accuracy.</p>
+<ul>
+<li>Monitor and manage</li>
+<li>Measure success </li>
+<li>Model pipelines</li>
+<li>Big data </li>
+<li>Retrain or retire model</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data">
+<a class="anchor" href="#Data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data<a class="anchor-link" href="#Data"> </a>
+</h2>
+<p>Not all data is equal. Some data is timely, better quality, verifiable, better formated and domain relevant to your situation.</p>
+<p>Data needs to be organized from many formats, departments and time scales and made available on the data platform/lake. This organization creates relevance to data, since it can now be seen as a whole and efficiently integrated in other systems.</p>
+<p>Data might also be missing. You might have to buy it, engineer it or account for its absence in you projects.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Analytics-tools-and-methodologies">
+<a class="anchor" href="#Analytics-tools-and-methodologies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Analytics tools and methodologies<a class="anchor-link" href="#Analytics-tools-and-methodologies"> </a>
+</h2>
+<p>The choice of technology and design choice is a whole ecosystem that needs frquent, carefull monitoring. It will ultimately house your models. The accuracy, completion rates, cost and joy of working on a project will be heavily influenced by your analytics tools and methods.</p>
+<ul>
+<li>choice of analytics tools and competing alternatives. Mostly influenced by industry trends, costs, culture and ease of integration into larger ecosystem.</li>
+<li>benchmarks for quality, acurracy and speed. This will mostly be determined on a projects basis as a deliverable.</li>
+<li>training on tools, configuration, maitanance and access. These standards are set by the data science manager adviced by business continuity models. </li>
+<li>utilisation of tools per project and model. Measures the efficacy and utilisation of available tools. </li>
+<li>IT infrasctructure. Your data tools sit on top or are fed into the larger IT infrascture. </li>
+<li>models shipped and design choices used. Score of success that advices future tech, hires and design choices.</li>
+<li>maintainance audits. Frequent of servicing models and refactoring of code. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-scientist">
+<a class="anchor" href="#Data-scientist" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data scientist<a class="anchor-link" href="#Data-scientist"> </a>
+</h2>
+<p><img src="/fastblog/images/copied_from_nb/../images/d_scientist.jpg" alt=""></p>
+<p>A data scientist is a manager, a designer and the stake holder of the processes above.</p>
+<p>The data scientist enumerates project value, potential constraints, moving parts and reservations about projects.</p>
+<p>Data scientists monitor modifications and updates to business opportunities, implementation constraints, management constraints, regulatory constraints, data constraints, skill contraints and tooling constraints.</p>
+<p>They keep a score card of past analytics projects, approaches applied and any changes in views to current data driven approaches in the business.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="MacLawry/fastblog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/fastblog/datascience" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/fastblog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/fastblog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/fastblog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Growing into the data science profession by seeking simple, robust scalable solutions to problems. ❤</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/Maclawry" title="Maclawry"><svg class="svg-icon grey"><use xlink:href="/fastblog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.instagram.com/Maclawree" title="Maclawree"><svg class="svg-icon grey"><use xlink:href="/fastblog/assets/minima-social-icons.svg#instagram"></use></svg></a></li><li><a rel="me" href="https://twitter.com/Maclawree" title="Maclawree"><svg class="svg-icon grey"><use xlink:href="/fastblog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
