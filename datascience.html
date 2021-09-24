@@ -4,23 +4,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Data Mining. The Science of unraveling hidden - or not so hidden - gems from data | Developing Analytic Talent</title>
+<title>Data mining for hidden gems in data | Developing Analytic Talent</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Data Mining. The Science of unraveling hidden - or not so hidden - gems from data" />
+<meta property="og:title" content="Data mining for hidden gems in data" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="The art and science of knowledge discovery from datasets" />
-<meta property="og:description" content="The art and science of knowledge discovery from datasets" />
+<meta name="description" content="My take on knowledge discovery from datasets" />
+<meta property="og:description" content="My take on knowledge discovery from datasets" />
 <link rel="canonical" href="https://maclawry.github.io/fastblog/datascience" />
 <meta property="og:url" content="https://maclawry.github.io/fastblog/datascience" />
 <meta property="og:site_name" content="Developing Analytic Talent" />
 <meta property="og:image" content="https://maclawry.github.io/fastblog/images/8.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-09-21T00:00:00-05:00" />
+<meta property="article:published_time" content="2021-09-23T00:00:00-05:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://maclawry.github.io/fastblog/images/8.png" />
-<meta property="twitter:title" content="Data Mining. The Science of unraveling hidden - or not so hidden - gems from data" />
+<meta property="twitter:title" content="Data mining for hidden gems in data" />
 <script type="application/ld+json">
-{"url":"https://maclawry.github.io/fastblog/datascience","@type":"BlogPosting","image":"https://maclawry.github.io/fastblog/images/8.png","headline":"Data Mining. The Science of unraveling hidden - or not so hidden - gems from data","dateModified":"2021-09-21T00:00:00-05:00","datePublished":"2021-09-21T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://maclawry.github.io/fastblog/datascience"},"description":"The art and science of knowledge discovery from datasets","@context":"https://schema.org"}</script>
+{"url":"https://maclawry.github.io/fastblog/datascience","@type":"BlogPosting","image":"https://maclawry.github.io/fastblog/images/8.png","headline":"Data mining for hidden gems in data","dateModified":"2021-09-23T00:00:00-05:00","datePublished":"2021-09-23T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://maclawry.github.io/fastblog/datascience"},"description":"My take on knowledge discovery from datasets","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/fastblog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://maclawry.github.io/fastblog/feed.xml" title="Developing Analytic Talent" /><link rel="shortcut icon" type="image/x-icon" href="/fastblog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -91,13 +91,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Data Mining. The Science of unraveling hidden - or not so hidden - gems from data</h1><p class="page-description"> The art and science of knowledge discovery from datasets</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-09-21T00:00:00-05:00" itemprop="datePublished">
-        Sep 21, 2021
+    <h1 class="post-title p-name" itemprop="name headline">Data mining for hidden gems in data</h1><p class="page-description"> My take on knowledge discovery from datasets</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-09-23T00:00:00-05:00" itemprop="datePublished">
+        Sep 23, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      6 min read
     
 </span></p>
 
@@ -151,12 +151,11 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h1"><a href="#What-is-Data-Mining">What is Data Mining </a>
+<li class="toc-entry toc-h1"><a href="#What-is-data-mining">What is data mining </a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#Data-Mining-Project-Workflow">Data Mining Project Workflow </a></li>
-<li class="toc-entry toc-h2"><a href="#Data">Data </a></li>
-<li class="toc-entry toc-h2"><a href="#Analytics-tools-and-methodologies">Analytics tools and methodologies </a></li>
-<li class="toc-entry toc-h2"><a href="#Data-scientist">Data scientist </a></li>
+<li class="toc-entry toc-h2"><a href="#The--data-mining-project-workflow">The  data mining project workflow </a></li>
+<li class="toc-entry toc-h2"><a href="#The-data">The data </a></li>
+<li class="toc-entry toc-h2"><a href="#The-data-scientist">The data scientist </a></li>
 </ul>
 </li>
 </ul><!--
@@ -171,21 +170,37 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="What-is-Data-Mining">
-<a class="anchor" href="#What-is-Data-Mining" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is Data Mining<a class="anchor-link" href="#What-is-Data-Mining"> </a>
+<h1 id="What-is-data-mining">
+<a class="anchor" href="#What-is-data-mining" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is data mining<a class="anchor-link" href="#What-is-data-mining"> </a>
 </h1>
+<p>This is my take on responsibilities, demands, processes and professionalism for having a robust problem solving arsenal when dealing with data.</p>
+<p>After working extensively in financial markets for the last 5 years, I know the delight and power of having great insight. It saves you time and dramatically changes your trajectory for success.</p>
+<p>I see 2 versions of data mining. One based on a process of data processing that is well researched and documented. This involves answering questions have been solved- and their variations, its a matter of knowing the models that apply to your situation. Think recommendation engines, or a spam comment filters, the process is known. The nuances are getting it work for you, and finetunning for deployment.</p>
+<p>In the other, has general business questions like, 'How can a logistics company increase revenue by taking on more diverse kinds of deliveries? This problem has many moving parts. 
+It needs statistical research, domain expertise, and creativity. To get good at this kinds of problems, you need data journalism, information design, data simulation and a good handle of programming and algorithm design.</p>
+<p>The obvious questions are, 'How can it go wrong?' and 'How can be the one to see it before it happens?'. Consicely:</p>
+<ul>
+<li>Do I have data or do have to simulate it?</li>
+<li>Is the data represented correctly?</li>
+<li>Is data integrity maintained in all stages of during reading or writing?</li>
+<li>What are the right, ambitious and wrong questions to ask? </li>
+<li>Is our automation and coding skill up to par? </li>
+<li>Do I have a strong defensible foundation for choice of tools, algorithms and design choices?</li>
+<li>How will I communicate and deliver findings?</li>
+<li>What should the ouput look?</li>
+<li>What I'm I looking for, or atleast what Im I looking at?</li>
+<li>How do I decouple the solution into simple abstractions that I can think about?</li>
+</ul>
 <p>As the name sugguests data mining is knowledge discovery from datasets.</p>
-<p>Its searching through data to come up with valuable information that can be used as new knowledge for existing problems.</p>
-<p>Problems are reduced to quantifiable sums as hypothesis statements.</p>
-<p>The data mining process is structured and relies on good statistical reasoning and explainability; for this reason, the solution needs to be generalizable and reproducable.</p>
-<p>The output of data mining models is simple, robust and translatable/interpratable for it to be plugged into the value chain.</p>
-<p>eg... the similarity score of netflix movies is an easily interpratable number- 0-100. Easily understandable at a glance though the underlying model maybe complex.</p>
+<p>Its searching through data to come up with valuable information that can be used as new knowledge for existing problems. In searching, data representation maybe you most important goal. Some creativity does come to mind, but there are generally acceptable ways.</p>
+<p>Problems are reduced to quantifiable sums as hypothesis statements.The data mining process is structured and relies on good statistical reasoning and explainability; for this reason, the solution needs to be generalizable and reproducable.</p>
+<p>The output of data mining models is simple, robust and translatable/interpratable for it to be plugged into the value chain, eg... the similarity score of netflix movies is an easily interpratable number- 0-100. Easily understandable at a glance though the underlying model maybe complex.</p>
 <p>The data mining strategy uses a data driven approach on a vast number of business problems and opportunities,
-with Data Scietists working on huge number of seemingly unrelated problems with great success; ranging from 
+with Data Scietists working on huge number of seemingly unrelated problems; ranging from 
 social impact, medical imaging, law, politics and hobby projects.</p>
 <p>This hints that there is strong underlying workflow for success in data mining.</p>
-<p>Data Science as a role that makes data and skills available for data driven approaches to strategic issues.</p>
-<p>The strategies vary; from a simple google form questionnaire asking for feedback to specialised consultation services.</p>
+<p>Data Science as a role, makes data and skills available for data driven approaches to strategic issues.</p>
+<p>Data strategies vary in complexity; from a simple google form questionnaire asking for feedback to specialised consultation services.</p>
 
 </div>
 </div>
@@ -193,45 +208,48 @@ social impact, medical imaging, law, politics and hobby projects.</p>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-Mining-Project-Workflow">
-<a class="anchor" href="#Data-Mining-Project-Workflow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Mining Project Workflow<a class="anchor-link" href="#Data-Mining-Project-Workflow"> </a>
+<h2 id="The--data-mining-project-workflow">
+<a class="anchor" href="#The--data-mining-project-workflow" aria-hidden="true"><span class="octicon octicon-link"></span></a>The  data mining project workflow<a class="anchor-link" href="#The--data-mining-project-workflow"> </a>
 </h2>
 <p>No data mining intro would be complete without the CRISP-DM model...</p>
 <p>Below is a variant of the CRISP-DM model.</p>
 <ol>
 <li>Business opportunity and hypothesis formulation </li>
 </ol>
-<p>The first part is understanding the problem domain, questioning assumptions and mostly reading widely and scantily for possible solutions. You would then formulate hypothesis that best seek to enlighten opinions. You would also check the quality and quantity of data and how it is served. Record any inconsistencies in data, and assupmtions that may be important further down the line.</p>
+<p>The first part is envision the business oportunity, then understanding the problem domain, questioning assumptions and reading widely and scantily for possible solutions. You would then formulate hypothesis that best seek to enlighten opinions. You would also check the quality and quantity of data and how it is served. Record any inconsistencies in data, and assupmtions that may be important further down the line. Loosely couple your moving pieces and create an abstraction layer.</p>
 <ul>
 <li>Business opportunity</li>
 <li>Find data sources. Availability and Suitabiity</li>
 <li>Explore and visualize data. Predictions and Insights</li>
 <li>Ascertain consistency or account for inconsistencies</li>
+<li>Decouple the pieces of the solution and design your abstraction layer</li>
 </ul>
 <ol>
 <li>Proposing a model solution. Its implementation and serving  </li>
 </ol>
-<p>With credible data analysis reports, you can have a idea of possible models that should have decent results. Once you have some base models, you can tweek them with more data or engineer features.</p>
+<p>With credible exploratory data analysis and domain research, you have an idea of possible models that should have decent results. Once you have some base models, you can tweek them with more data or engineer features. Engineering features is going to be the most rewarding addition to your model accuracy, spend some time on it.</p>
 <ul>
-<li>Clean data</li>
+<li>Clean data </li>
 <li>Feature engineer data</li>
-<li>Additional data</li>
+<li>Add data</li>
 <li>Train models </li>
 <li>Model ensemble</li>
-<li>Deploy best model</li>
+<li>Audit best model</li>
 <li>Model explainability </li>
 </ul>
 <ol>
-<li>Auditing model and solution implementation </li>
+<li>Auditing model for solution implementation </li>
 </ol>
-<p>To ascertain your model works well on production data, you must constantly audit data sources, inputs, pipelines and data warehouses and keep tabs on any changes that affect your model accuracy.</p>
+<p>To ascertain your model resilience on production data, you must constantly audit data sources, inputs, pipelines and data warehouses and keep tabs on any changes that affect your model accuracy. Further to checking data being fed into the model, also use best software practices for data mining. This include:</p>
 <ul>
-<li>Monitor and manage</li>
-<li>Measure success </li>
-<li>Model pipelines</li>
-<li>Big data </li>
-<li>Retrain or retire model</li>
+<li>Unit testing modules and functions and all abstration layers </li>
+<li>Using model pipelines </li>
+<li>Logging critical parts of your softare layer</li>
+<li>Proper documentation and defensible design and model choices</li>
+<li>Accuracy scoring and model decay checking</li>
+<li>Retraining, updating and retiring models</li>
 </ul>
+<p>Steps 2 and 3 are iterative. Thats is why its is important to create an asbraction layer and loose coupling early on. Your whole project shouldnt crush on every iteration. You can work on one part without thinking much about the other parts.</p>
 
 </div>
 </div>
@@ -239,12 +257,13 @@ social impact, medical imaging, law, politics and hobby projects.</p>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data">
-<a class="anchor" href="#Data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data<a class="anchor-link" href="#Data"> </a>
+<h2 id="The-data">
+<a class="anchor" href="#The-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>The data<a class="anchor-link" href="#The-data"> </a>
 </h2>
-<p>Not all data is equal. Some data is timely, better quality, verifiable, better formated and domain relevant to your situation.</p>
-<p>Data needs to be organized from many formats, departments and time scales and made available on the data platform/lake. This data availabilty creates relevance to data, since it can now be seen as a whole and efficiently integrated in other systems.</p>
-<p>Data might also be missing. You might have to buy it, engineer it or account for its absence in you projects.</p>
+<p>Not all data is the same. Some data is timely, has more volume, better quality, verifiable, better formated and domain relevant to your situation.</p>
+<p>Data needs to be organized from many formats, departments and time scales and made available on the data platform/lake. This data availability creates relevance to data, since it can now be use as a whole and efficiently integrated in other systems. Data warehouses can take various shapes and sizes, depending on the nature, format and usecase. Some can have data of the same format. While others can mix various data formats and sources.</p>
+<p>Data might also be missing. You might have to buy it, engineer it or account for its absence in your projects.</p>
+<p>There needs to be good data engineering practices for the most basic and widely applicable data needs and tools. i.e data backup, databases querry, big data tools, data pipelines and parallel computing</p>
 
 </div>
 </div>
@@ -264,19 +283,14 @@ social impact, medical imaging, law, politics and hobby projects.</p>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Analytics-tools-and-methodologies">
-<a class="anchor" href="#Analytics-tools-and-methodologies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Analytics tools and methodologies<a class="anchor-link" href="#Analytics-tools-and-methodologies"> </a>
+<h2 id="The-data-scientist">
+<a class="anchor" href="#The-data-scientist" aria-hidden="true"><span class="octicon octicon-link"></span></a>The data scientist<a class="anchor-link" href="#The-data-scientist"> </a>
 </h2>
-<p>The choice of technology and design choice is a whole ecosystem that needs frequent, carefull monitoring. It will ultimately house your models. The accuracy, completion rates, cost and joy of working on a project will be heavily influenced by your analytics tools and methods.</p>
-<ul>
-<li>choice of analytics tools and competing alternatives. Mostly influenced by industry trends, costs, culture and ease of integration into larger ecosystem.</li>
-<li>benchmarks for quality, acurracy and speed. This will mostly be determined on a projects basis as a deliverable.</li>
-<li>training on tools, configuration, maitanance and access. These standards are set by the data science manager adviced by business continuity models. </li>
-<li>utilisation of tools per project and model. Measures the efficacy and utilisation of available tools. </li>
-<li>IT infrasctructure. Your data tools sit on top or are fed into the larger IT infrascture. </li>
-<li>models shipped and design choices used. Score of success that advices future tech, hires and design choices.</li>
-<li>maintainance audits. Frequent of servicing models and refactoring of code. </li>
-</ul>
+<p><img src="/fastblog/images/copied_from_nb/../images/d_scientist.jpg" alt=""></p>
+<p>A data scientist is a manager, a designer and the stake holder of the processes above.</p>
+<p>The data scientist enumerates project value, potential constraints, moving parts and reservations about projects.</p>
+<p>Data scientists monitor modifications and updates to business opportunities, implementation constraints, management constraints, regulatory constraints, data constraints, skill contraints and tooling constraints.</p>
+<p>They keep a score card of past analytics projects, approaches applied and any changes in views to current data driven approaches in the business.</p>
 
 </div>
 </div>
@@ -284,14 +298,7 @@ social impact, medical imaging, law, politics and hobby projects.</p>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-scientist">
-<a class="anchor" href="#Data-scientist" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data scientist<a class="anchor-link" href="#Data-scientist"> </a>
-</h2>
-<p><img src="/fastblog/images/copied_from_nb/../images/d_scientist.jpg" alt=""></p>
-<p>A data scientist is a manager, a designer and the stake holder of the processes above.</p>
-<p>The data scientist enumerates project value, potential constraints, moving parts and reservations about projects.</p>
-<p>Data scientists monitor modifications and updates to business opportunities, implementation constraints, management constraints, regulatory constraints, data constraints, skill contraints and tooling constraints.</p>
-<p>They keep a score card of past analytics projects, approaches applied and any changes in views to current data driven approaches in the business.</p>
+<p>I like to think of data scientist as a great information designer, who is able to have great perspecives on the data he is working with. He is able to represent it in a way that the most important information is simple to discern and utilise.</p>
 
 </div>
 </div>
@@ -331,7 +338,7 @@ social impact, medical imaging, law, politics and hobby projects.</p>
       </div>
     </div>
 
-    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/Maclawry" title="Maclawry"><svg class="svg-icon grey"><use xlink:href="/fastblog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.instagram.com/Maclawree" title="Maclawree"><svg class="svg-icon grey"><use xlink:href="/fastblog/assets/minima-social-icons.svg#instagram"></use></svg></a></li><li><a rel="me" href="https://twitter.com/Maclawree" title="Maclawree"><svg class="svg-icon grey"><use xlink:href="/fastblog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/Maclawry" title="Maclawry"><svg class="svg-icon grey"><use xlink:href="/fastblog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.instagram.com/Maclawree" title="Maclawree"><svg class="svg-icon grey"><use xlink:href="/fastblog/assets/minima-social-icons.svg#instagram"></use></svg></a></li><li><a rel="me" href="https://www.linkedin.com/in/Maclawree" title="Maclawree"><svg class="svg-icon grey"><use xlink:href="/fastblog/assets/minima-social-icons.svg#linkedin"></use></svg></a></li><li><a rel="me" href="https://twitter.com/Maclawree" title="Maclawree"><svg class="svg-icon grey"><use xlink:href="/fastblog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
 </div>
 
   </div>
